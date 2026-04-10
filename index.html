@@ -358,12 +358,12 @@
 
 <!-- CHIPS -->
 <div class="chips-bar">
-  <button class="chip" onclick="sendChip('Qual é a programação do dia?')">📋 Programação</button>
-  <button class="chip" onclick="sendChip('Como funciona o credenciamento?')">🪪 Credenciamento</button>
-  <button class="chip" onclick="sendChip('Como é realizada a votação?')">🗳️ Votação</button>
-  <button class="chip" onclick="sendChip('Quais são os conselhos e suas composições?')">🏛️ Conselhos</button>
-  <button class="chip" onclick="sendChip('Quais os procedimentos em caso de problema?')">⚠️ Problemas</button>
-  <button class="chip" onclick="sendChip('Como funciona a ata de eleição?')">📝 Ata</button>
+  <button class="chip" data-msg="Qual é a programação do dia?">📋 Programação</button>
+  <button class="chip" data-msg="Como funciona o credenciamento?">🪪 Credenciamento</button>
+  <button class="chip" data-msg="Como é realizada a votação?">🗳️ Votação</button>
+  <button class="chip" data-msg="Quais são os conselhos e suas composições?">🏛️ Conselhos</button>
+  <button class="chip" data-msg="Quais os procedimentos em caso de problema?">⚠️ Problemas</button>
+  <button class="chip" data-msg="Como funciona a ata de eleição?">📝 Ata</button>
 </div>
 
 <!-- CHAT -->
@@ -390,9 +390,9 @@
   <div class="input-area">
     <div class="input-wrap">
       <textarea id="userInput" placeholder="Faça uma pergunta sobre a Conferência..." rows="1"
-        onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+        id="userInput"></textarea>
     </div>
-    <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+    <button class="send-btn" id="sendBtn" >
       <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
     </button>
   </div>
@@ -415,101 +415,134 @@ INFORMAÇÕES DO EVENTO:
 - Horário: 08h às 18h
 - Local: CEU Ponte Alta — Av. Florestan Fernandes, s/nº — Jardim Ponte Alta, Guarulhos/SP
 - Tema: "Guarulhos: Democracia e Direito à Cultura"
-- Inscrições: 20/03/2026 a 02/04/2026
+- Inscrições: 20/03/2026 a 05/04/2026 — ENCERRADAS
 - Contato: fomentocultura@guarulhos.sp.gov.br | WhatsApp: (11) 2087-4175
+- Base legal: Portarias nº 06, 07 e 012/2026-SCT (publicadas em 13/03, 20/03 e 08/04)
+
+DADOS DE INSCRIÇÕES (base oficial final):
+- Total de inscritos confirmados: 724
+- Público geral (sem candidatura Funcultura): 684
+- Deferidos ao Funcultura: 277
+- Indeferidos ao Funcultura: 122 (principal motivo: ausência de portfólio — 49,2%)
+- Candidatos ao CMPC: 53
+
+DISTRIBUIÇÃO POR SEGMENTO:
+- Música: 173 inscritos, 5 candidatos CMPC
+- Artes Cênicas: 118 inscritos, 6 candidatos CMPC
+- Assoc./Org. Culturais: 111 inscritos, 10 candidatos CMPC
+- Cultura Popular Tradicional: 99 inscritos, 13 candidatos CMPC
+- Hip-Hop: 58 inscritos, 5 candidatos CMPC
+- Patrimônio Histórico e Cultural: 53 inscritos, 6 candidatos CMPC
+- Literatura: 48 inscritos, 1 candidato CMPC
+- Audiovisual: 39 inscritos, 3 candidatos CMPC
+- Artes Visuais e Artesanato: 24 inscritos, 4 candidatos CMPC
+- Sem segmento: 1 inscrito, 0 candidatos CMPC
 
 PROGRAMAÇÃO DO DIA:
 PRIMEIRA ETAPA:
-- 8h–8h30: Credenciamento (Entrada)
-- 8h30–8h45: Abertura oficial (Auditório)
-- 8h45–10h: Apresentação da Portaria nº 007/2026-SCT, diretrizes, procedimentos de debate/votação e regras eleitorais (Auditório)
-- 10h–12h30: Debates sobre políticas culturais, avaliação do Plano Municipal de Cultura, Eleição do CMPC e consolidação de relatórios (Salas por segmento)
-- 11h30–12h30: Assembleia de eleição para Conselho Diretor do Funcultura (Sala Funcultura)
-- 12h30–13h30: Intervalo para almoço
+- 8h–9h: Credenciamento dos participantes (Entrada)
+- 9h15–9h45: Abertura oficial da Conferência (Auditório)
+- 9h45–10h30: Orientações gerais — Apresentação da Portaria nº 007/2026-SCT, explicação do Regimento, Programação e Manual do Candidato, orientações sobre processo eleitoral CMPC e Funcultura (Auditório)
+- 10h30–11h45: Debates por segmento — políticas culturais, avaliação do Plano Municipal de Cultura, eleição dos membros do CMPC, consolidação dos relatórios (Salas por segmento)
+- 11h45–12h45: Assembleia de eleição dos representantes da sociedade civil para o Conselho Diretor do Funcultura (Sala Funcultura)
+- 12h45–13h45: Intervalo para almoço
 
 SEGUNDA ETAPA:
-- 13h30–18h: Apresentação dos resultados, comunicação dos eleitos para o CMPC, fala aberta dos participantes, consolidação das contribuições, relatório final e encerramento (Auditório)
+- 13h45–18h: Apresentação dos resultados dos debates, comunicação oficial dos eleitos para o CMPC, espaço de fala aberta dos participantes, consolidação das contribuições e relatório final, encerramento formal (Auditório)
 
 SEGMENTOS COM SALAS DE DEBATE:
-Artes Cênicas, Artes Visuais, Audiovisual, Cultura Popular, Hip Hop, Livro e Literatura, Música, Patrimônio Histórico, Associações Culturais
+Artes Cênicas, Artes Visuais e Artesanato, Audiovisual, Cultura Popular, Hip Hop, Livro e Literatura, Música, Patrimônio Histórico, Associações Culturais
 
 CREDENCIAMENTO:
 - Recepção dos participantes na entrada do CEU Ponte Alta
 - Conferência do nome na lista oficial de inscritos
 - Assinatura da lista de presença
-- Entrega do crachá conforme tipo:
+- Entrega do crachá:
+  • Participante geral → Crachá AZUL ESCURO
+  • FunCultura → Crachá VERDE ESCURO
+- Tipos de participantes:
   • Tipo I: Participante com direito a voz e voto
   • Tipo II: Candidato a representante da sociedade civil no CMPC
-  • Tipo III: Participante votante na Assembleia do Funcultura
-  • Tipo IV: Candidato a representante da sociedade civil no Conselho Diretor do Funcultura
-- Sem inscrição prévia: participa como OUVINTE (voz, sem voto)
-- Autoridades convidadas: voz, sem voto
+  • Tipo III: Participante votante na Assembleia do Conselho Diretor do FunCultura
+  • Tipo IV: Candidato a representante da sociedade civil no Conselho Diretor do FunCultura
+- Sem inscrição prévia: OUVINTE — voz sem voto. Procedimento: assinar lista com espaços livres e preencher etiqueta manualmente
+- Autoridades convidadas e representantes institucionais: voz, sem voto
+- Para votar é obrigatório: estar na lista oficial, fazer credenciamento presencial, assinar lista de presença e usar crachá visível durante todo o evento
 
 CONSELHOS:
 CMPC (Conselho Municipal de Política Cultural):
 - Caráter consultivo, deliberativo e normativo
-- 18 titulares + 18 suplentes (divisão paritária: 50% poder público / 50% sociedade civil)
-- Segmentos: Artes Visuais, Artes Cênicas, Audiovisual, Associações e OSC, Cultura Popular, Hip-Hop, Livro e Literatura, Música, Patrimônio Histórico e Cultural
+- 18 titulares + 18 suplentes (50% poder público / 50% sociedade civil)
+- Segmentos: Artes Visuais e Artesanato, Artes Cênicas, Audiovisual, Associações e Organizações Culturais, Cultura Popular, Hip-Hop, Livro e Literatura, Música, Patrimônio Histórico e Cultural
+- Função do conselheiro: formular políticas culturais, acompanhar o Plano Municipal de Cultura, participar de reuniões, representar seu segmento
+- Não remunerado; faltas frequentes podem gerar substituição
 
 Conselho Diretor do FunCultura:
 - Responsável pela gestão do Fundo Municipal de Cultura
 - 6 membros: 3 poder público + 3 sociedade civil
 - Para VOTAR: estar inscrito/credenciado, declarar atuação como produtor cultural, apresentar histórico
-- Para SE CANDIDATAR: ter 18+ anos, comprovar 2+ anos de atuação cultural, disponibilidade para reuniões
-- IMPORTANTE: participação nos conselhos não é remunerada; faltas recorrentes geram substituição
+- Para SE CANDIDATAR: ter 18+ anos, comprovar 2+ anos de atuação cultural, disponibilidade para reuniões e avaliação de projetos
+- Na cédula do Funcultura: podem ser assinalados até 3 candidatos por cédula
+- Eleitos os 3 mais votados
 
-VOTAÇÃO — PROCEDIMENTOS:
-- Apresentação de candidatos: 2 a 3 minutos por fala, máximo 20 minutos no total
+VOTAÇÃO — PROCEDIMENTOS ATUALIZADOS:
+- Apresentação dos candidatos: 2 a 3 minutos por fala
 - Registro dos candidatos na ata
-- Votação por erguimento do crachá
-- Contagem em voz alta e publicamente pelo coordenador
-- Salas com mais de 50 participantes: conferência visual por erguimento do crachá
-- VEDADO: servidores ocupantes de cargo em comissão ou função de confiança NÃO PODEM se candidatar às vagas da sociedade civil
+- Votação realizada com CÉDULAS IMPRESSAS (não mais por erguimento de crachá)
+- Procedimento: distribuição de cédulas, orientação de preenchimento, atenção a rasuras, marcação no crachá e na cédula atestando a votação, depósito em urna, apuração pública
+- Cédulas com rasuras ou mais de uma marcação serão ANULADAS
+- Contagem dos votos em voz alta e publicamente pelo coordenador
+- VEDADO: servidores com cargo em comissão ou função de confiança NÃO PODEM se candidatar às vagas da sociedade civil
 
-HIPÓTESES DE CANDIDATURA:
-- I: Apenas 1 candidato inscrito → referendado como titular; suplente definido entre os presentes
-- II: 2 candidatos inscritos → eleitores definem titular e suplente por votação
-- III: Sem candidatos previamente inscritos → participantes indicam e elegem entre delegados credenciados
-- IV: Registrar em ata todos os demais candidatos em ordem decrescente de votação para lista de suplência
-
-RESULTADO:
-- Titular: candidato com maior número de votos
-- Suplente: candidato com segunda maior votação
+CENÁRIOS DE CANDIDATURA:
+- I: Apenas 1 candidato → referendado como titular; suplente definido entre os presentes
+- II: 2 candidatos → eleitores definem titular e suplente por votação
+- III: Sem candidatos inscritos → participantes indicam e elegem entre os credenciados
 - Empate: nova votação. Persistindo empate: candidato de maior idade é eleito
 
 COMO OCORRE A ELEIÇÃO DO CMPC:
-A eleição dos representantes da sociedade civil para o CMPC ocorre durante a Conferência seguindo estas etapas:
-1. Reunião dos participantes por segmento cultural
-2. Apresentação dos candidatos previamente inscritos
-3. Votação pelos delegados credenciados de cada segmento
-4. Contagem pública dos votos
-5. Registro do resultado em ata
+Etapas dentro da sala de segmento (10h30–11h45, 75 minutos):
+1. Abertura (5 min): apresentação dos objetivos e regras
+2. Etapa 1 — Diagnóstico (20 min): falas de 2 min por participante sobre avanços e desafios
+3. Etapa 2 — Registro de Propostas (20 min): propostas claras, objetivas e executáveis
+4. Etapa 3 — Eleição CMPC (25 min): apresentação dos candidatos + votação + apuração
+5. Encerramento (5 min): leitura da ata, assinaturas, encaminhamento para plenária
 
-Critérios de eleição:
-- Titular: candidato com maior número de votos
-- Suplente: candidato com a segunda maior votação
-- Empate: nova votação entre os empatados
-- Persistindo empate: candidato de maior idade é eleito
+Cada segmento elege: 1 titular + 1 suplente + lista de classificação com todos os candidatos em ordem decrescente de votos
 
 VALIDAÇÃO DO RESULTADO:
-- Registrar total de votantes
-- Registrar votos por candidato
-- Definir titular e suplente
-- Assinatura da ata pelo coordenador de sala, secretário e delegados presentes
+- Registro do número total de votantes
+- Registro de votos por candidato
+- Definição de titular, suplente e demais classificados
+- Assinatura da ata pelo coordenador de sala
+- Assinatura do secretário de sala
+- Assinatura de um representante da SCT (pode repetir a assinatura do coordenador ou secretário, caso não tenha nenhum servidor na sala)
+- Assinatura de um representante da sociedade civil
+- Rubricar todas as folhas
+- Verificar espaços em branco na ata e inutilizar com traço para evitar registros indevidos
+- Atas e cédulas são essenciais para a validação do processo
+
+ORGANIZAÇÃO DAS SALAS:
+- Presença do coordenador designado
+- Presença do secretário de sala
+- Conferência da lista de participantes aptos a votar
+- Verificação das candidaturas previamente registradas
+- Relator responsável pelo registro das contribuições
 
 DEBATES — POLÍTICAS CULTURAIS:
-- 2 a 3 deliberações por sala
-- Avaliar a implementação do Plano Municipal de Cultura
-- Resultado registrado em relatório sintético
+- Até 3 proposições por sala
+- Avaliar a implementação do Plano Municipal de Cultura: avanços e desafios
+- Elaborar propostas para fortalecimento do Sistema Municipal de Cultura
+- Resultado registrado em relatório sintético para encaminhar à SCT
 Prioridades estratégicas:
 1. Fortalecimento dos mecanismos de participação social
 2. Ampliação dos instrumentos de fomento cultural
 3. Descentralização territorial das políticas culturais
 4. Valorização da economia da cultura
-5. Preservação da memória e da identidade cultural
+5. Preservação da memória e da identidade cultural do município
 
-PLENÁRIA FINAL:
-- Apresentação pública dos eleitos para CMPC e Funcultura
+PLENÁRIA FINAL (13h45–18h):
+- Apresentação pública dos eleitos para CMPC e FunCultura
 - Comunicação sintética dos resultados dos debates
 - Espaço de fala aberta (respeitar tempo de inscrição)
 - Consolidação das contribuições e aprovação do relatório final
@@ -517,21 +550,35 @@ PLENÁRIA FINAL:
 
 PROCEDIMENTOS EM CASO DE PROBLEMA:
 - Dúvida sobre votantes: consultar lista oficial de inscritos
-- Questionamento sobre candidatura: registrar ocorrência em ata
-- Empate: nova votação entre os empatados
-- Comportamento inadequado: coordenador adverte e registra em ata
+- Dúvidas sobre candidaturas: registrar em ata e contatar Fábia, André, Melissa, Bárbara ou Pamella imediatamente (presencial ou pelo grupo Mediadores e Relatores)
+- Empate: nova votação. Persistindo: candidato de maior idade é eleito
+- Comportamento inadequado ou ofensivo: advertir e registrar. Persistindo: contatar Fábia, André, Melissa, Bárbara ou Pamella imediatamente
 - Quórum mínimo: 2 pessoas — definir titular e suplente entre ambos
-- Moções e cartas de repúdio: redigidas em folha avulsa, assinadas por 25%+ dos presentes
+- Moções e cartas de repúdio: devem ter temática propositiva do Plano Municipal de Cultura, redigidas em documento separado pelo requerente, assinadas por mínimo 25% dos participantes para leitura na plenária final
+- Manifestações fora da temática da Conferência: encaminhar por outros canais (protocolo na SCT ou ouvidoria do município)
 
-PREPARAÇÃO ANTERIOR (checklist):
-✔ Publicação Portarias nº 06 e 07/2026-SCT (13 e 20 de março)
-✔ Inscrições encerradas: 02/04/2026
-✔ Lista preliminar de inscritos: 07/04/2026
-✔ Conferência de candidaturas: 08/04/2026
-✔ Organização das listas por segmento: 09/04/2026
-✔ Impressão das listas de presença: 10/04/2026
-✔ Definição de coordenadores de sala: 10/04/2026
-✔ Impressão das atas de eleição: 10/04/2026
+CHECKLIST ANTES DO EVENTO (7h–8h):
+- Montagem de credenciamento
+- Listas de presença em ordem alfabética (impressas)
+- Listas de presença com linhas para participantes sem inscrição (com direito a voz)
+- Crachás azul escuro (participante geral) e verde escuro (FunCultura)
+- Kit para salas: sacolas com prancheta, pendrive, sulfite, docs de apoio, marca-texto, saco plástico para urna
+- Cédulas impressas por segmento e Funcultura
+- Atas por segmento impressas
+- Identificação das salas
+- Teste de som (auditório)
+- Separação de urnas por segmento
+- Briefing com equipe
+
+PREPARAÇÃO ANTERIOR (concluída):
+- Publicação das Portarias nº 06, 07 e 012/2026-SCT (13/03, 20/03 e 08/04)
+- Encerramento das inscrições: 05/04/2026
+- Conferência das candidaturas: 08/04/2026
+- Organização das listas por segmento: 09/04/2026
+- Impressão das listas de presença: 09/04/2026
+- Definição de coordenadores de sala: 08/04/2026
+- Impressão das atas de eleição: 09/04/2026
+- Reunião de alinhamento com as equipes: 10/04/2026
 
 Responda em português, de forma clara, objetiva e útil. Use linguagem acessível mas profissional. Quando listar informações, organize-as de forma clara. Se a pergunta não estiver relacionada à Conferência, responda educadamente que você é especializado apenas neste evento e redirecione para perguntas relevantes.`;
 
@@ -640,14 +687,4 @@ async function sendMessage() {
     history.push({ role: 'assistant', content: reply });
     addMessage('bot', reply);
 
-  } catch (e) {
-    removeTyping();
-    addMessage('bot', 'Desculpe, ocorreu um erro ao processar sua pergunta. Tente novamente.');
-  } finally {
-    isLoading = false;
-    document.getElementById('sendBtn').disabled = false;
-  }
-}
-</script>
-</body>
-</html>
+  } catch (e
