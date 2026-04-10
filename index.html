@@ -686,4 +686,15 @@ async function sendMessage() {
     history.push({ role: 'assistant', content: reply });
     addMessage('bot', reply);
 
-  } catch (e
+  } catch (e) {
+    removeTyping();
+    addMessage('bot', 'Desculpe, ocorreu um erro. Tente novamente.');
+  } finally {
+    isLoading = false;
+    document.getElementById('sendBtn').disabled = false;
+    document.getElementById('userInput').focus();
+  }
+}
+</script>
+</body>
+</html>
