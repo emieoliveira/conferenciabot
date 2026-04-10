@@ -358,12 +358,12 @@
 
 <!-- CHIPS -->
 <div class="chips-bar">
-  <button class="chip" data-msg="Qual é a programação do dia?">📋 Programação</button>
-  <button class="chip" data-msg="Como funciona o credenciamento?">🪪 Credenciamento</button>
-  <button class="chip" data-msg="Como é realizada a votação?">🗳️ Votação</button>
-  <button class="chip" data-msg="Quais são os conselhos e suas composições?">🏛️ Conselhos</button>
-  <button class="chip" data-msg="Quais os procedimentos em caso de problema?">⚠️ Problemas</button>
-  <button class="chip" data-msg="Como funciona a ata de eleição?">📝 Ata</button>
+  <button class="chip" onclick="sendChip('Qual é a programação do dia?')">📋 Programação</button>
+  <button class="chip" onclick="sendChip('Como funciona o credenciamento?')">🪪 Credenciamento</button>
+  <button class="chip" onclick="sendChip('Como é realizada a votação?')">🗳️ Votação</button>
+  <button class="chip" onclick="sendChip('Quais são os conselhos e suas composições?')">🏛️ Conselhos</button>
+  <button class="chip" onclick="sendChip('Quais os procedimentos em caso de problema?')">⚠️ Problemas</button>
+  <button class="chip" onclick="sendChip('Como funciona a ata de eleição?')">📝 Ata</button>
 </div>
 
 <!-- CHAT -->
@@ -389,10 +389,9 @@
 
   <div class="input-area">
     <div class="input-wrap">
-      <textarea id="userInput" placeholder="Faça uma pergunta sobre a Conferência..." rows="1"
-        id="userInput"></textarea>
+      <textarea id="userInput" placeholder="Faça uma pergunta sobre a Conferência..." rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
     </div>
-    <button class="send-btn" id="sendBtn" >
+    <button class="send-btn" id="sendBtn" onclick="sendMessage()">
       <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
     </button>
   </div>
